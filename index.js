@@ -2,6 +2,7 @@ function addItem() {
   $("#js-shopping-list-form").submit(function(event) {
     event.preventDefault();
     const newItem = $('#shopping-list-entry').val();
+    $('#shopping-list-entry').val('');
     $(".shopping-list").append(
       `<li>
           <span class="shopping-item">${newItem}</span>
@@ -14,8 +15,8 @@ function addItem() {
             </button>
           </div>
         </li>`);
-  }); 
-};
+  });
+  }
 
 $(addItem);
 
